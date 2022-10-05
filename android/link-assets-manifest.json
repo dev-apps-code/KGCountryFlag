@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "source/assets/fonts/MADE TOMMY Bold.otf",
+      "sha1": "45b8aa5d79738e9230154cf7930cc087f67c5e65"
+    },
+    {
+      "path": "source/assets/fonts/MADE TOMMY Medium.otf",
+      "sha1": "834adfb5f350714b94337dd60ddf586bb17c0f4d"
+    }
+  ]
+}
