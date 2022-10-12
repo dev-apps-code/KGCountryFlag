@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import {
   Alert,
   FlatList,
@@ -15,6 +15,8 @@ import {
   Text,
   TouchableOpacity,
   View,
+  StyleSheet,
+  Animated
 } from 'react-native';
 
 //lib
@@ -33,6 +35,7 @@ import {
 import {useDispatch, useSelector} from 'react-redux';
 
 export const Arena = () => {
+  const labelProbability = 70;
   const route = useRoute();
   const navigation = useNavigation();
   const optionsArray = useSelector(state => state.arena.optionsArray);
@@ -41,7 +44,62 @@ export const Arena = () => {
   const pointsInt = useSelector(state => state.arena.pointsInt);
   const dispatch = useDispatch();
 
+  const countInterval = useRef(null);
+  const [count, setCount] = useState(0);
+  const [pbWidth, setPbWidth] = useState(0);
+  const [labelFlag, setLabelFlag] = useState(0);
+
+  const animVal = new Animated.Value(0);
+  const loaderValue = useRef(animVal).current;
+  const load = (count) => {
+      Animated.timing(loaderValue, {
+        toValue: count, //final value
+        duration: 500, //update value in 500 milliseconds
+        useNativeDriver: true,
+      }).start();
+  };
+
+  const width = loaderValue.interpolate({
+    inputRange: [0, 100],
+    outputRange: [-pbWidth, 0],
+    extrapolate: "clamp"
+  });
+
+  const [last, setLast] = useState(Date.now());
+  const [delta, setDelta] = useState(0);
+
+  useEffect(() => {
+    // setCount((old) => old + 5);
+    
+    countInterval.current = setInterval(() => setCount((old) => old + 5), 1000);
+    return () => {
+      clearInterval(countInterval); //when user exits, clear this interval.
+    };
+  }, []);
+ 
+  useEffect(() => {
+    load(count)
+    
+    if (count >= 100) {
+      setCount(100);
+      clearInterval(countInterval);
+    } else {
+      // setCount((old) => old + 5);
+      // setTimeout(() => {
+      //   setCount((old) => old + 5);
+      // }, 1000);
+    }
+  }, [count]);
+
   //functions
+  const getDeltaTime = () => {
+    let now = Date.now();
+    let diff = now - last;
+    console.log(diff);
+    setLast(now);
+    setDelta(diff);
+  };
+
   const onPressOption = data => {
     if (data.value === answerObject.value) {
       dispatch(setRound());
@@ -49,10 +107,13 @@ export const Arena = () => {
       dispatch(increasePoints());
     } else {
       dispatch(setRound());
-      Alert.alert('wrong');
+      // Alert.alert('wrong');
     }
-    console.log(data);
-    console.log(answerObject);
+
+    const flag = Math.floor(Math.random() * 100) > labelProbability ? 1 : 0;
+    setLabelFlag(flag);
+
+    getDeltaTime();
   };
   //components
   const RenderOptionsList = () => {
@@ -125,42 +186,45 @@ export const Arena = () => {
           resizeMode={'stretch'}
         />
         <Text adjustsFontSizeToFit style={styles.questionText}>
-          {answerObject.label}
+          { labelFlag ? answerObject.value : answerObject.label }
         </Text>
       </View>
 
       <RenderOptionsList />
       <View style={styles.gaugeView}>
-        <Image
+        {/* <Image
           style={styles.comboImageContainer}
           source={require('../../../assets/images/comboMeterContainerImage.png')}
           resizeMode={'contain'}
         />
-        <Image
-          style={styles.comboImageContainer}
-          source={require('../../../assets/images/comboMeterContainerImage.png')}
-          resizeMode={'contain'}
-        />
-        <Image
-          style={styles.comboImageContainer}
-          source={require('../../../assets/images/comboMeterContainerImage.png')}
-          resizeMode={'contain'}
-        />
-        <Image
-          style={styles.comboImageContainer}
-          source={require('../../../assets/images/comboMeterContainerImage.png')}
-          resizeMode={'contain'}
-        />
-        <Image
-          style={styles.comboImageContainer}
-          source={require('../../../assets/images/comboMeterContainerImage.png')}
-          resizeMode={'contain'}
-        />
-        <Image
-          style={styles.comboImageContainer}
-          source={require('../../../assets/images/comboMeterContainerImage.png')}
-          resizeMode={'contain'}
-        />
+        */}
+
+        <View style={styles.container}>
+          <View style={styles.progressBar} onLayout={e => {
+            const nw = e.nativeEvent.layout.width;
+            setPbWidth(nw);
+          }}>
+              <Animated.View 
+                style={[
+                  [StyleSheet.absoluteFill],
+                  {
+                    backgroundColor: "#8BED4F",
+                    width: '100%',
+                    position: 'absolute',
+
+                  },
+                  {
+                    transform: [
+                      {
+                        translateX: width
+                      }
+                    ]
+                  }
+                ]}
+              >
+              </Animated.View>
+          </View>
+        </View>
       </View>
     </SafeAreaView>
   );

@@ -4,6 +4,8 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
+import Constants from 'expo-constants';
+
 export const styles = StyleSheet.create({
   mainView: {
     flex: 1,
@@ -70,9 +72,10 @@ export const styles = StyleSheet.create({
   gaugeView: {
     height: hp('10%'),
     width: wp('100%'),
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     borderWidth: 1,
     flexDirection: 'row',
+    padding: 8,
   },
   settingsIcon: {
     height: wp('6.5%'),
@@ -129,4 +132,25 @@ export const styles = StyleSheet.create({
   comboImageContainer: {
     width: wp('13%'),
   },
+  container: {
+    flex: 1,
+    flexDirection: "column", //column direction
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#e2e2e2',
+    padding: 8,
+  }, 
+  progressBar: {
+    height: 20,
+    flexDirection: "row",
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    width: '100%',
+    backgroundColor: 'white',
+    borderColor: '#000',
+    borderWidth: 2,
+    borderRadius: 5,
+    overflow: 'hidden'
+  }
 });
