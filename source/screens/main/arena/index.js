@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import {
   Alert,
   FlatList,
@@ -16,7 +16,7 @@ import {
   TouchableOpacity,
   View,
   StyleSheet,
-  Animated
+  Animated,
 } from 'react-native';
 
 //lib
@@ -33,6 +33,7 @@ import {
   setRound,
 } from '../../../redux/arena/slice';
 import {useDispatch, useSelector} from 'react-redux';
+import {ProgressBar} from './ProgressBar';
 
 export const Arena = () => {
   const labelProbability = 70;
@@ -44,52 +45,10 @@ export const Arena = () => {
   const pointsInt = useSelector(state => state.arena.pointsInt);
   const dispatch = useDispatch();
 
-  const countInterval = useRef(null);
-  const [count, setCount] = useState(0);
-  const [pbWidth, setPbWidth] = useState(0);
   const [labelFlag, setLabelFlag] = useState(0);
-
-  const animVal = new Animated.Value(0);
-  const loaderValue = useRef(animVal).current;
-  const load = (count) => {
-      Animated.timing(loaderValue, {
-        toValue: count, //final value
-        duration: 500, //update value in 500 milliseconds
-        useNativeDriver: true,
-      }).start();
-  };
-
-  const width = loaderValue.interpolate({
-    inputRange: [0, 100],
-    outputRange: [-pbWidth, 0],
-    extrapolate: "clamp"
-  });
 
   const [last, setLast] = useState(Date.now());
   const [delta, setDelta] = useState(0);
-
-  useEffect(() => {
-    // setCount((old) => old + 5);
-    
-    countInterval.current = setInterval(() => setCount((old) => old + 5), 1000);
-    return () => {
-      clearInterval(countInterval); //when user exits, clear this interval.
-    };
-  }, []);
- 
-  useEffect(() => {
-    load(count)
-    
-    if (count >= 100) {
-      setCount(100);
-      clearInterval(countInterval);
-    } else {
-      // setCount((old) => old + 5);
-      // setTimeout(() => {
-      //   setCount((old) => old + 5);
-      // }, 1000);
-    }
-  }, [count]);
 
   //functions
   const getDeltaTime = () => {
@@ -186,7 +145,7 @@ export const Arena = () => {
           resizeMode={'stretch'}
         />
         <Text adjustsFontSizeToFit style={styles.questionText}>
-          { labelFlag ? answerObject.value : answerObject.label }
+          {labelFlag ? answerObject.value : answerObject.label}
         </Text>
       </View>
 
@@ -200,30 +159,7 @@ export const Arena = () => {
         */}
 
         <View style={styles.container}>
-          <View style={styles.progressBar} onLayout={e => {
-            const nw = e.nativeEvent.layout.width;
-            setPbWidth(nw);
-          }}>
-              <Animated.View 
-                style={[
-                  [StyleSheet.absoluteFill],
-                  {
-                    backgroundColor: "#8BED4F",
-                    width: '100%',
-                    position: 'absolute',
-
-                  },
-                  {
-                    transform: [
-                      {
-                        translateX: width
-                      }
-                    ]
-                  }
-                ]}
-              >
-              </Animated.View>
-          </View>
+          <ProgressBar />
         </View>
       </View>
     </SafeAreaView>
