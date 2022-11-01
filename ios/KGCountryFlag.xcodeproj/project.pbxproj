@@ -12,6 +12,15 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A1AD99E5290BC113005D728F /* notes in Resources */ = {isa = PBXBuildFile; fileRef = A1AD99E4290BC113005D728F /* notes */; };
+		A1F6833B290BB9F200C9AF14 /* 05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68333290BB9F100C9AF14 /* 05.mp3 */; };
+		A1F6833C290BB9F200C9AF14 /* 03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68334290BB9F100C9AF14 /* 03.mp3 */; };
+		A1F6833D290BB9F200C9AF14 /* 02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68335290BB9F100C9AF14 /* 02.mp3 */; };
+		A1F6833E290BB9F200C9AF14 /* 01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68336290BB9F200C9AF14 /* 01.mp3 */; };
+		A1F6833F290BB9F200C9AF14 /* 06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68337290BB9F200C9AF14 /* 06.mp3 */; };
+		A1F68340290BB9F200C9AF14 /* 07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68338290BB9F200C9AF14 /* 07.mp3 */; };
+		A1F68341290BB9F200C9AF14 /* 04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68339290BB9F200C9AF14 /* 04.mp3 */; };
+		A1F68342290BB9F200C9AF14 /* 08.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F6833A290BB9F200C9AF14 /* 08.mp3 */; };
 		AA8DAFD8563C1C3AE5D08B0F /* libPods-KGCountryFlag-KGCountryFlagTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E505B07507C9E9CDAE57987 /* libPods-KGCountryFlag-KGCountryFlagTests.a */; };
 		AAA1CB401C5365AB3DC831E7 /* libPods-KGCountryFlag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F487B180ED50F8EAB88F4C12 /* libPods-KGCountryFlag.a */; };
 		E059C5588EF74EBF8BF9ECDF /* MADE TOMMY Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */; };
@@ -42,10 +51,19 @@
 		1D5A441A4A6382C0C641F3F9 /* Pods-KGCountryFlag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag.debug.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag/Pods-KGCountryFlag.debug.xcconfig"; sourceTree = "<group>"; };
 		3E505B07507C9E9CDAE57987 /* libPods-KGCountryFlag-KGCountryFlagTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KGCountryFlag-KGCountryFlagTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE2924E43F24C90D1BAD30D /* Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig"; sourceTree = "<group>"; };
-		5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MADE TOMMY Medium.otf"; path = "../source/assets/fonts/MADE TOMMY Medium.otf"; sourceTree = "<group>"; };
+		5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MADE TOMMY Medium.otf"; path = "../source/assets/fonts/MADE TOMMY Medium.otf"; sourceTree = "<group>"; };
 		6715A43294D590A73FE625F5 /* Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KGCountryFlag/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A50DFDAE36724FF0A798B1AE /* MADE TOMMY Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MADE TOMMY Bold.otf"; path = "../source/assets/fonts/MADE TOMMY Bold.otf"; sourceTree = "<group>"; };
+		A1AD99E4290BC113005D728F /* notes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = notes; path = ../source/assets/notes; sourceTree = SOURCE_ROOT; };
+		A1F68333290BB9F100C9AF14 /* 05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 05.mp3; path = ../source/assets/notes/05.mp3; sourceTree = "<group>"; };
+		A1F68334290BB9F100C9AF14 /* 03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 03.mp3; path = ../source/assets/notes/03.mp3; sourceTree = "<group>"; };
+		A1F68335290BB9F100C9AF14 /* 02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 02.mp3; path = ../source/assets/notes/02.mp3; sourceTree = "<group>"; };
+		A1F68336290BB9F200C9AF14 /* 01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 01.mp3; path = ../source/assets/notes/01.mp3; sourceTree = "<group>"; };
+		A1F68337290BB9F200C9AF14 /* 06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 06.mp3; path = ../source/assets/notes/06.mp3; sourceTree = "<group>"; };
+		A1F68338290BB9F200C9AF14 /* 07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 07.mp3; path = ../source/assets/notes/07.mp3; sourceTree = "<group>"; };
+		A1F68339290BB9F200C9AF14 /* 04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 04.mp3; path = ../source/assets/notes/04.mp3; sourceTree = "<group>"; };
+		A1F6833A290BB9F200C9AF14 /* 08.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 08.mp3; path = ../source/assets/notes/08.mp3; sourceTree = "<group>"; };
+		A50DFDAE36724FF0A798B1AE /* MADE TOMMY Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MADE TOMMY Bold.otf"; path = "../source/assets/fonts/MADE TOMMY Bold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F487B180ED50F8EAB88F4C12 /* libPods-KGCountryFlag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KGCountryFlag.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,12 +112,12 @@
 				5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* KGCountryFlag */ = {
 			isa = PBXGroup;
 			children = (
+				A1AD99E4290BC113005D728F /* notes */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -130,6 +148,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				A1F68336290BB9F200C9AF14 /* 01.mp3 */,
+				A1F68335290BB9F100C9AF14 /* 02.mp3 */,
+				A1F68334290BB9F100C9AF14 /* 03.mp3 */,
+				A1F68339290BB9F200C9AF14 /* 04.mp3 */,
+				A1F68333290BB9F100C9AF14 /* 05.mp3 */,
+				A1F68337290BB9F200C9AF14 /* 06.mp3 */,
+				A1F68338290BB9F200C9AF14 /* 07.mp3 */,
+				A1F6833A290BB9F200C9AF14 /* 08.mp3 */,
 				13B07FAE1A68108700A75B9A /* KGCountryFlag */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* KGCountryFlagTests */,
@@ -257,8 +283,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F6833D290BB9F200C9AF14 /* 02.mp3 in Resources */,
+				A1F6833B290BB9F200C9AF14 /* 05.mp3 in Resources */,
+				A1F6833C290BB9F200C9AF14 /* 03.mp3 in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				A1AD99E5290BC113005D728F /* notes in Resources */,
+				A1F6833F290BB9F200C9AF14 /* 06.mp3 in Resources */,
+				A1F68340290BB9F200C9AF14 /* 07.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A1F68341290BB9F200C9AF14 /* 04.mp3 in Resources */,
+				A1F68342290BB9F200C9AF14 /* 08.mp3 in Resources */,
+				A1F6833E290BB9F200C9AF14 /* 01.mp3 in Resources */,
 				E7294354ABB542B5868FD6C3 /* MADE TOMMY Bold.otf in Resources */,
 				E059C5588EF74EBF8BF9ECDF /* MADE TOMMY Medium.otf in Resources */,
 			);

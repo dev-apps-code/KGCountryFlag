@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     height: hp('8%'),
     width: wp('100%'),
     flexDirection: 'row',
-    marginBottom: hp('8%'),
+    marginBottom: hp('3%'),
   },
   centerHeaderView: {
     height: hp('8%'),
@@ -45,11 +45,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: hp('1%'),
     marginBottom: hp('4%'),
+    // marginTop: hp('4%'),
     paddingVertical: hp('2%'),
     paddingHorizontal: wp('2%'),
   },
   questionText: {
-    fontSize: hp('4%'),
+    fontSize: hp('2.5%'),
     color: '#FFFFFF',
     textAlign: 'center',
     fontFamily: 'MADE TOMMY Bold',
@@ -57,6 +58,7 @@ export const styles = StyleSheet.create({
   optionsListView: {
     height: hp('40%'),
     width: wp('70%'),
+    marginTop: hp('3.5%'),
   },
   optionView: {
     height: hp('10%'),
@@ -113,8 +115,8 @@ export const styles = StyleSheet.create({
   levelText: {
     position: 'absolute',
     color: '#FFFFFF',
-    fontSize: hp('4%'),
-    marginTop: hp('1.5%'),
+    fontSize: hp('2.5%'),
+    marginTop: hp('2.5%'),
     fontFamily: 'MADE TOMMY Bold',
   },
   optionImageContainer: {
@@ -135,8 +137,8 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column", //column direction
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#e2e2e2',
     padding: 8,
@@ -150,7 +152,22 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderColor: '#000',
     borderWidth: 2,
-    borderRadius: 5,
+    borderRadius: 10,
     overflow: 'hidden'
-  }
+  },
+  comboContainer: {
+    width: wp('43%'),
+  },
+  comboView: {
+
+    height: hp('5%'),
+    // width: wp('70%'),
+    justifyContent: 'center',
+    alignItems: 'center',
+    // borderRadius: hp('1%'),
+    // marginBottom: hp('4%'),
+    // marginTop: hp('4%'),
+    paddingVertical: hp('2%'),
+    paddingHorizontal: wp('2%'),
+  },
 });
