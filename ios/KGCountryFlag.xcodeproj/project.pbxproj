@@ -24,7 +24,7 @@
 		AA8DAFD8563C1C3AE5D08B0F /* libPods-KGCountryFlag-KGCountryFlagTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E505B07507C9E9CDAE57987 /* libPods-KGCountryFlag-KGCountryFlagTests.a */; };
 		AAA1CB401C5365AB3DC831E7 /* libPods-KGCountryFlag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F487B180ED50F8EAB88F4C12 /* libPods-KGCountryFlag.a */; };
 		E059C5588EF74EBF8BF9ECDF /* MADE TOMMY Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */; };
-		E7294354ABB542B5868FD6C3 /* MADE TOMMY Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A50DFDAE36724FF0A798B1AE /* MADE TOMMY Bold.otf */; };
+		E7294354ABB542B5868FD6C3 /* MADETOMMY-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A50DFDAE36724FF0A798B1AE /* MADETOMMY-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 		A1F68338290BB9F200C9AF14 /* 07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 07.mp3; path = ../source/assets/notes/07.mp3; sourceTree = "<group>"; };
 		A1F68339290BB9F200C9AF14 /* 04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 04.mp3; path = ../source/assets/notes/04.mp3; sourceTree = "<group>"; };
 		A1F6833A290BB9F200C9AF14 /* 08.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 08.mp3; path = ../source/assets/notes/08.mp3; sourceTree = "<group>"; };
-		A50DFDAE36724FF0A798B1AE /* MADE TOMMY Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MADE TOMMY Bold.otf"; path = "../source/assets/fonts/MADE TOMMY Bold.otf"; sourceTree = "<group>"; };
+		A50DFDAE36724FF0A798B1AE /* MADETOMMY-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MADETOMMY-Bold.otf"; path = "../source/assets/fonts/MADETOMMY-Bold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F487B180ED50F8EAB88F4C12 /* libPods-KGCountryFlag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KGCountryFlag.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,7 +108,7 @@
 		067FEAE5DE694F249EFCBD06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A50DFDAE36724FF0A798B1AE /* MADE TOMMY Bold.otf */,
+				A50DFDAE36724FF0A798B1AE /* MADETOMMY-Bold.otf */,
 				5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */,
 			);
 			name = Resources;
@@ -294,7 +294,7 @@
 				A1F68341290BB9F200C9AF14 /* 04.mp3 in Resources */,
 				A1F68342290BB9F200C9AF14 /* 08.mp3 in Resources */,
 				A1F6833E290BB9F200C9AF14 /* 01.mp3 in Resources */,
-				E7294354ABB542B5868FD6C3 /* MADE TOMMY Bold.otf in Resources */,
+				E7294354ABB542B5868FD6C3 /* MADETOMMY-Bold.otf in Resources */,
 				E059C5588EF74EBF8BF9ECDF /* MADE TOMMY Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

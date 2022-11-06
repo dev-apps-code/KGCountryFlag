@@ -6,18 +6,16 @@
  * @flow strict-local
  */
 
-import React, {useRef, useState, useEffect, useMemo} from 'react';
+import React, {useRef, useState, useEffect, useMemo, useCallback} from 'react';
 import {
-  Alert,
   FlatList,
   Image,
   SafeAreaView,
   Text,
   TouchableOpacity,
   View,
-  StyleSheet,
   Animated,
-  Easing,
+  ImageBackground,
 } from 'react-native';
 
 //lib
@@ -26,6 +24,10 @@ import CountryFlag from 'react-native-country-flag';
 
 //files
 import {styles} from './styles';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 //redux
 import {
@@ -49,11 +51,7 @@ export const Arena = () => {
   const pointsInt = useSelector(state => state.arena.pointsInt);
   const lifebarInt = useSelector(state => state.arena.lifebarInt);
   const dispatch = useDispatch();
-
-  const [labelFlag, setLabelFlag] = useState(0);
-
   const [last, setLast] = useState(Date.now());
-  const [delta, setDelta] = useState(0);
 
   const scaleAnim = useRef(new Animated.Value(0)).current;
   const fadeAnim = useRef(new Animated.Value(1)).current;
@@ -64,16 +62,19 @@ export const Arena = () => {
   // Enable playback in silence mode
   Sound.setCategory('Playback');
 
-  const notes = useMemo(() => [
-    new Sound('notes/01.mp3', Sound.MAIN_BUNDLE),
-    new Sound('notes/02.mp3', Sound.MAIN_BUNDLE),
-    new Sound('notes/03.mp3', Sound.MAIN_BUNDLE),
-    new Sound('notes/04.mp3', Sound.MAIN_BUNDLE),
-    new Sound('notes/05.mp3', Sound.MAIN_BUNDLE),
-    new Sound('notes/06.mp3', Sound.MAIN_BUNDLE),
-    new Sound('notes/07.mp3', Sound.MAIN_BUNDLE),
-    new Sound('notes/08.mp3', Sound.MAIN_BUNDLE),
-  ]);
+  const notes = useMemo(
+    () => [
+      new Sound('notes/01.mp3', Sound.MAIN_BUNDLE),
+      new Sound('notes/02.mp3', Sound.MAIN_BUNDLE),
+      new Sound('notes/03.mp3', Sound.MAIN_BUNDLE),
+      new Sound('notes/04.mp3', Sound.MAIN_BUNDLE),
+      new Sound('notes/05.mp3', Sound.MAIN_BUNDLE),
+      new Sound('notes/06.mp3', Sound.MAIN_BUNDLE),
+      new Sound('notes/07.mp3', Sound.MAIN_BUNDLE),
+      new Sound('notes/08.mp3', Sound.MAIN_BUNDLE),
+    ],
+    [],
+  );
 
   const COMBO_TIME_LIMIT = 10000;
 
@@ -84,34 +85,22 @@ export const Arena = () => {
   }, []);
 
   const comboAnim = () => {
-    Animated.spring(
-      scaleAnim,
-      {
-        toValue: 1,
-        friction: 1,
-        tension: 140,
-      }
-    ).start();
+    Animated.spring(scaleAnim, {
+      toValue: 1,
+      friction: 1,
+      tension: 140,
+      useNativeDriver: true,
+    }).start();
 
-    Animated.timing(
-      fadeAnim,
-      {
-        toValue: 0,
-        duration: 1000,
-      }
-    ).start();
+    Animated.timing(fadeAnim, {
+      toValue: 0,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start();
   };
-  
+
   //functions
-  const getDeltaTime = () => {
-    let now = Date.now();
-    let diff = now - last;
-    
-    setLast(now);
-    setDelta(diff);
-  };
-  
-  const comboUp = (points) => {
+  const comboUp = points => {
     const arr = ['none', 'none', 'none'];
 
     if (points > 4) {
@@ -123,7 +112,7 @@ export const Arena = () => {
         setComboLevel(comboLevel + 1);
       }
 
-      notes[comboLevel].play((success) => {
+      notes[comboLevel].play(success => {
         if (success) {
           console.log('successfully finished playing');
         } else {
@@ -133,20 +122,19 @@ export const Arena = () => {
     }
 
     setComboShow([...arr]);
-  }
+  };
 
   const onPressOption = data => {
-    getDeltaTime();
+    let now = Date.now();
+    let diff = now - last;
+    setLast(now);
 
     if (data.value === answerObject.value) {
-      // dispatch(setRound());
       dispatch(setLevel(levelInt + 1));
-      
-      const points = getCompoPoints(delta);
+      const points = getCompoPoints(diff);
       dispatch(setPoints(pointsInt + points));
-
-      const hp = lifebarInt + points;
-      dispatch(setLifebar(hp));
+      const currentLifebar = lifebarInt + points;
+      dispatch(setLifebar(currentLifebar));
       console.log('correct');
 
       scaleAnim.setValue(0);
@@ -155,31 +143,38 @@ export const Arena = () => {
       comboUp(points);
       comboAnim();
     } else {
-      // dispatch(setRound());
-      if (lifebarInt > 0)
+      if (lifebarInt > 0) {
         dispatch(setLifebar(lifebarInt - 10));
-      // Alert.alert('wrong')
+      }
       console.log('wrong');
-
       if (comboLevel > 0) {
         setComboLevel(comboLevel - 1);
       }
     }
 
     dispatch(setRound());
+  };
 
-    const flag = Math.floor(Math.random() * 100) > labelProbability ? 1 : 0;
-    setLabelFlag(flag);
+  const getCompoPoints = d => {
+    if (d <= COMBO_TIME_LIMIT) {
+      let points = Math.floor((COMBO_TIME_LIMIT - d) / 1000);
+      return points;
+    }
+
+    return 0;
   };
   //components
   const RenderOptionsList = () => {
+    const keyExtractor = useCallback(item => item.value, []);
+
     return (
       <FlatList
         contentContainerStyle={styles.optionsListView}
         data={optionsArray}
         numColumns={2}
-        keyExtractor={(item, index) => item.value}
+        keyExtractor={keyExtractor}
         renderItem={RenderOption}
+        scrollEnabled={false}
       />
     );
   };
@@ -200,121 +195,115 @@ export const Arena = () => {
     );
   };
 
-  const getCompoPoints = (d) => {
-    if (d <= COMBO_TIME_LIMIT) {
-      let points = Math.floor((COMBO_TIME_LIMIT - d) / 1000);
-      return points;
-    }
-
-    return 0;
-  }
-
   return (
-    <SafeAreaView style={styles.mainView}>
-      <View style={styles.headerView}>
-        <View style={styles.leftHeaderView}>
-          <Image
-            style={styles.settingsIcon}
-            source={require('../../../assets/icons/settingsIcon.png')}
-          />
-          <Image
-            style={styles.hamburgerIcon}
-            source={require('../../../assets/icons/hamburgerIcon.png')}
-          />
+    <SafeAreaView style={styles.safeAreView}>
+      <ImageBackground
+        source={require('../../../assets/images/arenaBackground.png')}
+        style={styles.mainView}>
+        <View style={styles.headerView}>
+          <View style={styles.leftHeaderView}>
+            <Image
+              style={styles.settingsIcon}
+              source={require('../../../assets/icons/settingsIcon.png')}
+            />
+            <Image
+              style={styles.hamburgerIcon}
+              source={require('../../../assets/icons/hamburgerIcon.png')}
+            />
+          </View>
+          <View style={styles.centerHeaderView}>
+            <Image
+              style={styles.levelContainerImage}
+              source={require('../../../assets/images/levelContainerImage.png')}
+              resizeMode={'stretch'}
+            />
+
+            <Text style={styles.levelText}>{levelInt}</Text>
+          </View>
+          <View style={styles.rightHeaderView}>
+            <View style={styles.coinTextContainer}>
+              <Text style={styles.coinText}>{pointsInt}</Text>
+            </View>
+
+            <Image
+              style={styles.coinIcon}
+              source={require('../../../assets/icons/coinIcon.png')}
+              resizeMode={'contain'}
+            />
+          </View>
         </View>
-        <View style={styles.centerHeaderView}>
+
+        <View style={styles.questionView}>
           <Image
-            style={styles.levelContainerImage}
-            source={require('../../../assets/images/levelContainerImage.png')}
+            style={styles.questionImageContainer}
+            source={require('../../../assets/images/questionContainer.png')}
             resizeMode={'stretch'}
           />
-
-          <Text style={styles.levelText}>{levelInt}</Text>
+          <Text adjustsFontSizeToFit style={styles.questionText}>
+            {(Math.floor(Math.random() * 100) > labelProbability ? 1 : 0)
+              ? answerObject.value
+              : answerObject.label}
+          </Text>
         </View>
-        <View style={styles.rightHeaderView}>
-          <View style={styles.coinTextContainer}>
-            <Text style={styles.coinText}>{pointsInt}</Text>
-          </View>
 
+        <Animated.View
+          useNativeDriver={true}
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{
+            ...styles.comboView,
+            opacity: fadeAnim,
+            position: 'absolute',
+            top: hp(25),
+            transform: [
+              {
+                scaleX: scaleAnim.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, 2],
+                }),
+              },
+              {
+                scaleY: scaleAnim.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, 2],
+                }),
+              },
+            ],
+          }}>
           <Image
-            style={styles.coinIcon}
-            source={require('../../../assets/icons/coinIcon.png')}
+            style={{
+              ...styles.comboContainer,
+              display: comboShow[0],
+            }}
+            source={require('../../../assets/images/asset_combo_cool.png')}
             resizeMode={'contain'}
           />
+
+          <Image
+            style={{
+              ...styles.comboContainer,
+              display: comboShow[1],
+            }}
+            source={require('../../../assets/images/asset_combo_good.png')}
+            resizeMode={'contain'}
+          />
+
+          <Image
+            style={{
+              ...styles.comboContainer,
+              display: comboShow[2],
+            }}
+            source={require('../../../assets/images/asset_combo_great.png')}
+            resizeMode={'contain'}
+          />
+        </Animated.View>
+
+        <RenderOptionsList />
+        <View style={styles.gaugeView}>
+          <View style={styles.container}>
+            <ProgressBar />
+          </View>
         </View>
-      </View>
-
-      <View style={styles.questionView}>
-        <Image
-          style={styles.questionImageContainer}
-          source={require('../../../assets/images/questionContainer.png')}
-          resizeMode={'stretch'}
-        />
-        <Text adjustsFontSizeToFit style={styles.questionText}>
-          {labelFlag ? answerObject.value : answerObject.label}
-        </Text>
-      </View>
-
-      <Animated.View style={{
-        ...styles.comboView, 
-        opacity: fadeAnim,
-        transform: [
-          {
-              scaleX: scaleAnim.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0, 2]
-              })
-          },
-          {
-              scaleY: scaleAnim.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0, 2]
-              })
-          }
-        ]
-      }}>
-        <Image
-          style={{
-            ...styles.comboContainer,
-            display: comboShow[0]
-          }}
-          source={require('../../../assets/images/asset_combo_cool.png')}
-          resizeMode={'contain'}
-        />
-
-        <Image
-          style={{
-            ...styles.comboContainer,
-            display: comboShow[1]
-          }}
-          source={require('../../../assets/images/asset_combo_good.png')}
-          resizeMode={'contain'}
-        />
-
-        <Image
-          style={{
-            ...styles.comboContainer,
-            display: comboShow[2]
-          }}
-          source={require('../../../assets/images/asset_combo_great.png')}
-          resizeMode={'contain'}
-        />
-       
-      </Animated.View>
-
-      <RenderOptionsList />
-      <View style={styles.gaugeView}>
-        {/* <Image
-          style={styles.comboImageContainer}
-          source={require('../../../assets/images/comboMeterContainerImage.png')}
-          resizeMode={'contain'}
-        />
-        */}
-
-        <View style={styles.container}>
-          <ProgressBar />
-        </View>
-      </View>
+      </ImageBackground>
     </SafeAreaView>
   );
 };

@@ -4,9 +4,7 @@ import {Animated, StyleSheet, View} from 'react-native';
 import {styles} from './styles';
 
 //redux
-import {
-  setLifebar,
-} from '../../../../redux/arena/slice';
+import {setLifebar} from '../../../../redux/arena/slice';
 
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -20,13 +18,15 @@ export const ProgressBar = () => {
   const lifebarInt = useSelector(state => state.arena.lifebarInt);
   const levelInt = useSelector(state => state.arena.levelInt);
 
-  const [progressBarColor, setProgressBarColor] = useState('rgba(179, 210, 59, 1)');
+  const [progressBarColor, setProgressBarColor] = useState(
+    'rgba(179, 210, 59, 1)',
+  );
 
   const dispatch = useDispatch();
 
   const lerp = (a, b, t) => {
     return a + (b - a) * t;
-  }
+  };
 
   // red
   // #e92f48
@@ -37,13 +37,13 @@ export const ProgressBar = () => {
   // blue
   // #10aad7
 
-  // orange 
+  // orange
   // #f9a139
 
   // navy blue
   // #11123d
 
-  const setProgressColor = (count) => {
+  const setProgressColor = count => {
     let c = count / 100;
 
     let str = 'rgba(';
@@ -53,7 +53,7 @@ export const ProgressBar = () => {
     str += ', 1)';
 
     setProgressBarColor(str);
-  }
+  };
 
   const load = count => {
     Animated.timing(loaderValue, {
@@ -62,7 +62,7 @@ export const ProgressBar = () => {
       useNativeDriver: true,
     }).start();
 
-    setProgressColor(count)
+    setProgressColor(count);
   };
 
   const width = loaderValue.interpolate({
@@ -74,12 +74,16 @@ export const ProgressBar = () => {
   useEffect(() => {
     setCount(0);
 
-    countInterval.current = setInterval(() => setCount(old => {
-      let adj = Math.min(7, Math.ceil(levelInt / 30));
-      adj = adj ? adj : 1;
+    countInterval.current = setInterval(
+      () =>
+        setCount(old => {
+          let adj = Math.min(7, Math.ceil(levelInt / 30));
+          adj = adj ? adj : 1;
 
-      return old + adj;
-    }), 1000);
+          return old + adj;
+        }),
+      1000,
+    );
 
     return () => {
       clearInterval(countInterval); //when user exits, clear this interval.
@@ -111,6 +115,7 @@ export const ProgressBar = () => {
         setPbWidth(nw);
       }}>
       <Animated.View
+        useNativeDriver={true}
         style={[
           [StyleSheet.absoluteFill],
           {
@@ -130,4 +135,3 @@ export const ProgressBar = () => {
     </View>
   );
 };
-

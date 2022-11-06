@@ -7,10 +7,14 @@ import {
 import Constants from 'expo-constants';
 
 export const styles = StyleSheet.create({
-  mainView: {
-    flex: 1,
+  safeAreView: {
     backgroundColor: '#f1f1cb',
+  },
+  mainView: {
+    // flex: 1,
     alignItems: 'center',
+    height: hp(100),
+    width: wp(100),
   },
   headerView: {
     height: hp('8%'),
@@ -53,7 +57,7 @@ export const styles = StyleSheet.create({
     fontSize: hp('2.5%'),
     color: '#FFFFFF',
     textAlign: 'center',
-    fontFamily: 'MADE TOMMY Bold',
+    fontFamily: 'MADETOMMY-Bold',
   },
   optionsListView: {
     height: hp('40%'),
@@ -72,10 +76,9 @@ export const styles = StyleSheet.create({
     borderRadius: hp('1%'),
   },
   gaugeView: {
-    height: hp('10%'),
+    height: hp('23%'),
     width: wp('100%'),
     justifyContent: 'flex-start',
-    borderWidth: 1,
     flexDirection: 'row',
     padding: 8,
   },
@@ -101,7 +104,7 @@ export const styles = StyleSheet.create({
     fontSize: hp('1.5%'),
     color: '#FFFFFF',
     textAlign: 'center',
-    fontFamily: 'MADE TOMMY Bold',
+    fontFamily: 'MADETOMMY-Bold',
   },
   coinTextContainer: {
     backgroundColor: '#000000',
@@ -117,7 +120,7 @@ export const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: hp('2.5%'),
     marginTop: hp('2.5%'),
-    fontFamily: 'MADE TOMMY Bold',
+    fontFamily: 'MADETOMMY-Bold',
   },
   optionImageContainer: {
     position: 'absolute',
@@ -136,16 +139,16 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    flexDirection: "column", //column direction
+    flexDirection: 'column', //column direction
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#e2e2e2',
+    // backgroundColor: '#e2e2e2',
     padding: 8,
-  }, 
+  },
   progressBar: {
     height: 20,
-    flexDirection: "row",
+    flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     width: '100%',
@@ -153,13 +156,12 @@ export const styles = StyleSheet.create({
     borderColor: '#000',
     borderWidth: 2,
     borderRadius: 10,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   comboContainer: {
     width: wp('43%'),
   },
   comboView: {
-
     height: hp('5%'),
     // width: wp('70%'),
     justifyContent: 'center',
