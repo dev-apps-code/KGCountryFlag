@@ -8,14 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* KGCountryFlagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* KGCountryFlagTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-KGCountryFlag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-KGCountryFlag.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-KGCountryFlag-KGCountryFlagTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-KGCountryFlag-KGCountryFlagTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E7294354ABB542B5868FD6C3 /* MADE TOMMY Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A50DFDAE36724FF0A798B1AE /* MADE TOMMY Bold.otf */; };
+		A1AD99E5290BC113005D728F /* notes in Resources */ = {isa = PBXBuildFile; fileRef = A1AD99E4290BC113005D728F /* notes */; };
+		A1F6833B290BB9F200C9AF14 /* 05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68333290BB9F100C9AF14 /* 05.mp3 */; };
+		A1F6833C290BB9F200C9AF14 /* 03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68334290BB9F100C9AF14 /* 03.mp3 */; };
+		A1F6833D290BB9F200C9AF14 /* 02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68335290BB9F100C9AF14 /* 02.mp3 */; };
+		A1F6833E290BB9F200C9AF14 /* 01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68336290BB9F200C9AF14 /* 01.mp3 */; };
+		A1F6833F290BB9F200C9AF14 /* 06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68337290BB9F200C9AF14 /* 06.mp3 */; };
+		A1F68340290BB9F200C9AF14 /* 07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68338290BB9F200C9AF14 /* 07.mp3 */; };
+		A1F68341290BB9F200C9AF14 /* 04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F68339290BB9F200C9AF14 /* 04.mp3 */; };
+		A1F68342290BB9F200C9AF14 /* 08.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1F6833A290BB9F200C9AF14 /* 08.mp3 */; };
+		AA8DAFD8563C1C3AE5D08B0F /* libPods-KGCountryFlag-KGCountryFlagTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E505B07507C9E9CDAE57987 /* libPods-KGCountryFlag-KGCountryFlagTests.a */; };
+		AAA1CB401C5365AB3DC831E7 /* libPods-KGCountryFlag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F487B180ED50F8EAB88F4C12 /* libPods-KGCountryFlag.a */; };
 		E059C5588EF74EBF8BF9ECDF /* MADE TOMMY Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */; };
+		E7294354ABB542B5868FD6C3 /* MADETOMMY-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A50DFDAE36724FF0A798B1AE /* MADETOMMY-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +41,31 @@
 		00E356EE1AD99517003FC87E /* KGCountryFlagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KGCountryFlagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* KGCountryFlagTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGCountryFlagTests.m; sourceTree = "<group>"; };
+		099B0EDC0CF5E2F441412332 /* Pods-KGCountryFlag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag.release.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag/Pods-KGCountryFlag.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* KGCountryFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGCountryFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = KGCountryFlag/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = KGCountryFlag/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = KGCountryFlag/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = KGCountryFlag/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KGCountryFlag/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-KGCountryFlag-KGCountryFlagTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KGCountryFlag-KGCountryFlagTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-KGCountryFlag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag.debug.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag/Pods-KGCountryFlag.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-KGCountryFlag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag.release.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag/Pods-KGCountryFlag.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-KGCountryFlag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KGCountryFlag.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5A441A4A6382C0C641F3F9 /* Pods-KGCountryFlag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag.debug.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag/Pods-KGCountryFlag.debug.xcconfig"; sourceTree = "<group>"; };
+		3E505B07507C9E9CDAE57987 /* libPods-KGCountryFlag-KGCountryFlagTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KGCountryFlag-KGCountryFlagTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE2924E43F24C90D1BAD30D /* Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MADE TOMMY Medium.otf"; path = "../source/assets/fonts/MADE TOMMY Medium.otf"; sourceTree = "<group>"; };
+		6715A43294D590A73FE625F5 /* Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KGCountryFlag/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig"; path = "Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig"; sourceTree = "<group>"; };
+		A1AD99E4290BC113005D728F /* notes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = notes; path = ../source/assets/notes; sourceTree = SOURCE_ROOT; };
+		A1F68333290BB9F100C9AF14 /* 05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 05.mp3; path = ../source/assets/notes/05.mp3; sourceTree = "<group>"; };
+		A1F68334290BB9F100C9AF14 /* 03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 03.mp3; path = ../source/assets/notes/03.mp3; sourceTree = "<group>"; };
+		A1F68335290BB9F100C9AF14 /* 02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 02.mp3; path = ../source/assets/notes/02.mp3; sourceTree = "<group>"; };
+		A1F68336290BB9F200C9AF14 /* 01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 01.mp3; path = ../source/assets/notes/01.mp3; sourceTree = "<group>"; };
+		A1F68337290BB9F200C9AF14 /* 06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 06.mp3; path = ../source/assets/notes/06.mp3; sourceTree = "<group>"; };
+		A1F68338290BB9F200C9AF14 /* 07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 07.mp3; path = ../source/assets/notes/07.mp3; sourceTree = "<group>"; };
+		A1F68339290BB9F200C9AF14 /* 04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 04.mp3; path = ../source/assets/notes/04.mp3; sourceTree = "<group>"; };
+		A1F6833A290BB9F200C9AF14 /* 08.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 08.mp3; path = ../source/assets/notes/08.mp3; sourceTree = "<group>"; };
+		A50DFDAE36724FF0A798B1AE /* MADETOMMY-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MADETOMMY-Bold.otf"; path = "../source/assets/fonts/MADETOMMY-Bold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		A50DFDAE36724FF0A798B1AE /* MADE TOMMY Bold.otf */ = {isa = PBXFileReference; name = "MADE TOMMY Bold.otf"; path = "../source/assets/fonts/MADE TOMMY Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */ = {isa = PBXFileReference; name = "MADE TOMMY Medium.otf"; path = "../source/assets/fonts/MADE TOMMY Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F487B180ED50F8EAB88F4C12 /* libPods-KGCountryFlag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KGCountryFlag.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-KGCountryFlag-KGCountryFlagTests.a in Frameworks */,
+				AA8DAFD8563C1C3AE5D08B0F /* libPods-KGCountryFlag-KGCountryFlagTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-KGCountryFlag.a in Frameworks */,
+				AAA1CB401C5365AB3DC831E7 /* libPods-KGCountryFlag.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +105,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		067FEAE5DE694F249EFCBD06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A50DFDAE36724FF0A798B1AE /* MADETOMMY-Bold.otf */,
+				5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* KGCountryFlag */ = {
 			isa = PBXGroup;
 			children = (
+				A1AD99E4290BC113005D728F /* notes */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -104,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-KGCountryFlag.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-KGCountryFlag-KGCountryFlagTests.a */,
+				F487B180ED50F8EAB88F4C12 /* libPods-KGCountryFlag.a */,
+				3E505B07507C9E9CDAE57987 /* libPods-KGCountryFlag-KGCountryFlagTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +148,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				A1F68336290BB9F200C9AF14 /* 01.mp3 */,
+				A1F68335290BB9F100C9AF14 /* 02.mp3 */,
+				A1F68334290BB9F100C9AF14 /* 03.mp3 */,
+				A1F68339290BB9F200C9AF14 /* 04.mp3 */,
+				A1F68333290BB9F100C9AF14 /* 05.mp3 */,
+				A1F68337290BB9F200C9AF14 /* 06.mp3 */,
+				A1F68338290BB9F200C9AF14 /* 07.mp3 */,
+				A1F6833A290BB9F200C9AF14 /* 08.mp3 */,
 				13B07FAE1A68108700A75B9A /* KGCountryFlag */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* KGCountryFlagTests */,
@@ -145,23 +181,13 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-KGCountryFlag.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-KGCountryFlag.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig */,
+				1D5A441A4A6382C0C641F3F9 /* Pods-KGCountryFlag.debug.xcconfig */,
+				099B0EDC0CF5E2F441412332 /* Pods-KGCountryFlag.release.xcconfig */,
+				6715A43294D590A73FE625F5 /* Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig */,
+				4AE2924E43F24C90D1BAD30D /* Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		067FEAE5DE694F249EFCBD06 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				A50DFDAE36724FF0A798B1AE /* MADE TOMMY Bold.otf */,
-				5A7F8468D11E43D3A0C82E07 /* MADE TOMMY Medium.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -170,12 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "KGCountryFlagTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				31C0430A441E28FF4A6B6D74 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				E957FA9D26423172CB646764 /* [CP] Embed Pods Frameworks */,
+				8BBA583CC75B5AB32759C8BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,14 +217,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "KGCountryFlag" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				3A541C9CCCAFC83AB57FEEEE /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				19AF8B6E3BC1780BDD82CBAA /* [CP] Embed Pods Frameworks */,
+				94AA092BF30DB547166DB8B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,9 +283,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F6833D290BB9F200C9AF14 /* 02.mp3 in Resources */,
+				A1F6833B290BB9F200C9AF14 /* 05.mp3 in Resources */,
+				A1F6833C290BB9F200C9AF14 /* 03.mp3 in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				A1AD99E5290BC113005D728F /* notes in Resources */,
+				A1F6833F290BB9F200C9AF14 /* 06.mp3 in Resources */,
+				A1F68340290BB9F200C9AF14 /* 07.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				E7294354ABB542B5868FD6C3 /* MADE TOMMY Bold.otf in Resources */,
+				A1F68341290BB9F200C9AF14 /* 04.mp3 in Resources */,
+				A1F68342290BB9F200C9AF14 /* 08.mp3 in Resources */,
+				A1F6833E290BB9F200C9AF14 /* 01.mp3 in Resources */,
+				E7294354ABB542B5868FD6C3 /* MADETOMMY-Bold.otf in Resources */,
 				E059C5588EF74EBF8BF9ECDF /* MADE TOMMY Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +318,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		19AF8B6E3BC1780BDD82CBAA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,7 +335,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag/Pods-KGCountryFlag-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		31C0430A441E28FF4A6B6D74 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,7 +357,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		3A541C9CCCAFC83AB57FEEEE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,24 +379,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		8BBA583CC75B5AB32759C8BC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		94AA092BF30DB547166DB8B7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,21 +413,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag/Pods-KGCountryFlag-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		E957FA9D26423172CB646764 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KGCountryFlag-KGCountryFlagTests/Pods-KGCountryFlag-KGCountryFlagTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -447,7 +482,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig */;
+			baseConfigurationReference = 6715A43294D590A73FE625F5 /* Pods-KGCountryFlag-KGCountryFlagTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -474,7 +509,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig */;
+			baseConfigurationReference = 4AE2924E43F24C90D1BAD30D /* Pods-KGCountryFlag-KGCountryFlagTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -498,7 +533,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-KGCountryFlag.debug.xcconfig */;
+			baseConfigurationReference = 1D5A441A4A6382C0C641F3F9 /* Pods-KGCountryFlag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -524,7 +559,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-KGCountryFlag.release.xcconfig */;
+			baseConfigurationReference = 099B0EDC0CF5E2F441412332 /* Pods-KGCountryFlag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -8,7 +8,7 @@
 
 import {useNavigation, useRoute} from '@react-navigation/native';
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {ImageBackground, Text, TouchableOpacity, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {decrement, increment} from '../../../redux/authentication/slice';
 import {setRound} from '../../../redux/arena/slice';
@@ -32,7 +32,10 @@ export const Login = () => {
   };
 
   return (
-    <View style={styles.mainView}>
+    <ImageBackground
+      source={require('../../../assets/images/mainMenuBackground.png')}
+      resizeMode="cover"
+      style={styles.mainView}>
       <Text>{route.name}</Text>
 
       <TouchableOpacity onPress={onPressGoBack} style={styles.goToLoginButton}>
@@ -42,6 +45,6 @@ export const Login = () => {
       <TouchableOpacity onPress={onPressLogin} style={styles.goToLoginButton}>
         <Text>Start game</Text>
       </TouchableOpacity>
-    </View>
+    </ImageBackground>
   );
 };

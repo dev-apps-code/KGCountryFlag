@@ -8,8 +8,9 @@
 
 import {useNavigation, useRoute} from '@react-navigation/native';
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {ImageBackground, Text, TouchableOpacity, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
+import {setRound} from '../../../redux/arena/slice';
 import {decrement, increment} from '../../../redux/authentication/slice';
 
 import {styles} from './styles';
@@ -20,8 +21,9 @@ export const Initial = () => {
   const count = useSelector(state => state.authentication.value);
   const dispatch = useDispatch();
 
-  const onPressLogin = () => {
-    navigation.push('Login');
+  const onPressStart = () => {
+    dispatch(setRound());
+    navigation.navigate('Arena');
   };
 
   const onPressIncrement = () => {
@@ -33,10 +35,13 @@ export const Initial = () => {
   };
 
   return (
-    <View style={styles.mainView}>
+    <ImageBackground
+      source={require('../../../assets/images/mainMenuBackground.png')}
+      resizeMode="cover"
+      style={styles.mainView}>
       <Text>{route.name}</Text>
-      <TouchableOpacity onPress={onPressLogin} style={styles.goToLoginButton}>
-        <Text>Go to login</Text>
+      <TouchableOpacity onPress={onPressStart} style={styles.goToLoginButton}>
+        <Text>Start</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={onPressIncrement}>
         <Text>up</Text>
@@ -45,6 +50,6 @@ export const Initial = () => {
       <TouchableOpacity onPress={onPressDecrement}>
         <Text>down</Text>
       </TouchableOpacity>
-    </View>
+    </ImageBackground>
   );
 };
